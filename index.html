@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Coding Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
  <body>
     <container class="grid" style="--bs-rows: 3;">
-        <nav class="navbar navbar-default navbar-align-between" style="grid-row: 1" role="navigation">View High Scores</nav>
-        
-        <div style="grid-row: 2">Quiz in this container</div>
-        
-        <div style="grid-row: 3">Answer Output This Container</div>
+        <nav>
+            <div class="navbar navbar-default navbar-align-between" style="grid-row: 1" role="navigation">View High Scores</div>
+            <div class="navbar navbar-default navbar-align-between" style="grid-row: 1" role="navigation">Time: 75</div>
+        </nav>
+               
+        <div id="questions" style="grid-row: 2">Quiz in this container</div>
+        <div id="answers" class="btn-group">
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+              </div>
+          </div>
+          <span>
+        <button id="takequiz" type="button" class="btn btn-success">Start Quiz</button>
+        </span>
+
+        <div id="results" style="grid-row: 3">Answer Output This Container</div>
     </container>
     <script src="script.js"></script>
 </body>
