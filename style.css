@@ -1,0 +1,75 @@
+:root {
+    font-size: 62.5%; /* Used for REM's size calculations */
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    margin: 0;
+    padding: 0;
+    color: black; 
+}
+
+h1 {
+    font-size: 5.5rem;
+    color:black;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: black;
+}
+
+h3 {
+    font-size: 2.5rem;
+    color: black;
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container > *{
+    width: 100%;
+    padding-top: 10.0rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 5.0rem;
+    
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.buttons {
+    text-decoration: none;
+}
+
+.btn:hover {
+
+}
+
+.answer-container {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}

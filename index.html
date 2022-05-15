@@ -9,26 +9,57 @@
     <link rel="stylesheet" href="style.css" />
   </head>
  <body>
-    <container class="grid" style="--bs-rows: 3;">
-        <nav>
-            <div class="navbar navbar-default navbar-align-between" style="grid-row: 1" role="navigation">View High Scores</div>
-            <div class="navbar navbar-default navbar-align-between" style="grid-row: 1" role="navigation">Time: 75</div>
-        </nav>
-               
-        <div id="questions" style="grid-row: 2">Quiz in this container</div>
-        <div id="answers" class="btn-group">
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-primary">Apple</button>
-                <button type="button" class="btn btn-primary">Samsung</button>
-                <button type="button" class="btn btn-primary">Sony</button>
-              </div>
-          </div>
-          <span>
-        <button id="takequiz" type="button" class="btn btn-success">Start Quiz</button>
-        </span>
+    <!--Refactored layout-->
+    <nav class="navbar navbar-default navbar-fixed-top"
+    <div class = "container">
+        <div id="mainpage" class="flex-center flex-column">
+        <a href="scores.html" class="">View High Scores </a>
+        Time Remaining: 00
+        </div>
+    </nav>
+    <main>
+    <div id="instructions" class = "container" style="text-align:center">
+        <div class="flex-center flex-column ">
+        <span>
+            <h1>Coding Quiz Challenge</h1>
+            <p>
+                <h3>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h3>
 
-        <div id="results" style="grid-row: 3">Answer Output This Container</div>
-    </container>
+            <div id="startquiz" class ="btn btn-primary">Start Quiz</div>
+        </span>
+    </div>
+    </main>
+    <content>
+    <div id ="questions" class="answer-container" style="text-align:center">
+        <div class="flex-center flex-column">
+            <h3 id="questions.question">Question will display here</h3>
+            <button id="answer1" class="btn btn-primary">Answer 1</button>
+            <button id="answer2" class="btn btn-primary">Answer 2</button>
+            <button id="answer3" class="btn btn-primary">Answer 3</button>
+            <button id="answer4" class="btn btn-primary">Answer 4</button>
+        </div>
+    </div>
+    
+
+    <div id ="answers" class="container" style="text-align:center">
+        <div class="flex-center flex-column">
+            <h3 id="correcincorrect">Correct! / Incorrect!</h3>
+        </div>
+    </div>
+
+    <div id ="scoreform" class="container" style="text-align:center">
+        <div class="flex-center flex-column">
+            High Score Form will display here
+        </div>
+    </div>
+
+    <div id ="scores" class="container" style="text-align:center">
+        <div class="flex-center flex-column">
+            High Scores will display here
+        </div>
+    </div>
+    </content>
+
     <script src="script.js"></script>
 </body>
 </html>
