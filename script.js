@@ -1,47 +1,18 @@
-//Variables
-var timer = "";
-var score = newScore();
+var questionsSelection = [
+    'Commonly used data types DO not include:', 
+    'The condition in an if/else statement is enclosed with ____', 
+    'Arrays in JavaScript can be used to store ____.', 
+    'String value must be enclosed within ____ when being assigned to a variable', 
+    'A very useful tool used during development and debugging for printing content to the debugger is ____' ];
 
-//Start Quiz Function
-function takeQuiz(_startQuiz) {
-    var questions = document.querySelector('#questions');
-    document.getElementById('#question').textContent = "";
+var questionOneAnswers = ['1. Strings', '2. Booleans', '3. Alerts', '4. Numbers'];
+var questionTwoAnswers = ['1. Quotes', '2. Curly Brackets', '3. Parenthesis', '4. Square Brackets'];
+var questionThreeAnswers = ['1. Numbers and Strings', '2. Other Arrays', '3. Booleans', '4. All Of The Above'];
+var questionFourAnswers = ['1. Commas', '2. Curly Brackets', '3. Quotes', '4. Parenthesis'];
+var questionFiveAnswers = ['1. JavaScript', '2. Terminal/Bash', '3. For Loops', '4. Console.Log'];
 
-}
-var answers = document.querySelector('#answers').textContent = "";
+var score = 0;
+var correctAnswerCount = 0;
+var incorrectAnswerCount = 0;
 
-//Need ad event listener here for clicking start quiz button 
-function startQuiz(_startQuiz) {
-    document.getElementById("takequiz");
-    document.addEventListener.click(startQuiz);
-};
-function startTimer() {
-    document.addEventListener.click(startQuiz);
-    document.getElementById("");
-}
-
-//Questions
-function questions() {
-var question1 = "Commonly used data types DO not include:";
-var question2 = "The condition in an if/else statement is enclosed with ____";
-var question3 = "Arrays in JavaScript can used to store ____";
-var question4 = "String value must be enclosed within ____ when being assigned to a variable";
-var question5 = "A very useful tool used during development and debugging for printing content to the debugger is ____.";
-
-}
-//Answers
-function answers() {
-var answer1 = "";
-var answer2 = "";
-var answer3 = "";   //Likely going to have to redo these as each question has multiple answers
-var answer4 = "";
-var answer5 = "";
-}
-
-//Correct Answer Logic
-
-//Incorrect Answer Logic
-
-//Score Logic
-
-//Timer Logic
+$(startquiz).on('click', function(getquestion)
