@@ -15,4 +15,17 @@ var score = 0;
 var correctAnswerCount = 0;
 var incorrectAnswerCount = 0;
 
-$(startquiz).on('click', function(getquestion)
+$(startquiz).on('click', function() {
+    var questionText = document.getElementById("questions.question");
+    questionText.insertAdjacentHTML('beforeEnd', getQuestion());
+
+});
+
+//Start Quiz on click function is returning object array iterator not sure why this is happening will try getting a new question with the function below//
+
+function getQuestion() {
+    questions = Math.floor(Math.random(0,5) * questionsSelection.length); //Get index of random question
+    console.log(questions); // First Console.log
+    var firstQuestion = questionsSelection.indexOf('questionsSelection');
+    console.log(firstQuestion,firstQuestion.Number); // Second Console.log
+}
