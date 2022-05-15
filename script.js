@@ -16,42 +16,48 @@ var correctAnswerCount = 0;
 var incorrectAnswerCount = 0;
 
 $(startquiz).on('click', function() {
+    getQuestion();
     var questionText = document.getElementById("questions.question");
-    questionText.insertAdjacentHTML('beforeEnd', getQuestion());
+    questionText.insertAdjacentHTML('beforeEnd', (questionText));
 
 });
 
-//Start Quiz on click function is returning object array iterator not sure why this is happening will try getting a new question with the function below//
 
 function getQuestion() {
-    var firstQuestion = Math.floor(Math.random() * questionsSelection.length); //Get index of random question
+    var firstQuestion = Math.floor(Math.random() * questionsSelection.length); //Get random question
     var secondQuestion = Math.floor(Math.random() * questionsSelection.length);
     var thirdQuestion = Math.floor(Math.random()* questionsSelection.length);
     var fourthQuestion = Math.floor(Math.random()* questionsSelection.length);
     var fifthQuestion = Math.floor(Math.random()* questionsSelection.length);
-    console.log(questionsSelection.length); // First Console.log
+    
     
     if (firstQuestion === 0) {
         questionText = 'Commonly used data types DO not include:';
         console.log(questionText);
+        return
     }//Show question 1
     
     else if (secondQuestion === 1) {
         questionText = 'The condition in an if/else statement is enclosed with ____';
+
         console.log(questionText);
+        return
     }  //Show question 2
 
     else if (thirdQuestion === 2) { 
         questionText = 'Arrays in JavaScript can be used to store ____.';
-        console.log(questionText); 
+        console.log(questionText);
+        return 
     } //Show question 3
     else if (fourthQuestion === 3) {
-            questionText = 'String value must be enclosed within ____ when being assigned to a variable';
-            console.log(questionText); 
+        questionText = 'String value must be enclosed within ____ when being assigned to a variable';
+        console.log(questionText);
+        return 
     } //Show question 4
 
     else if (fifthQuestion === 4); {
         questionText = 'A very useful tool used during development and debugging for printing content to the debugger is ____';
-        console.log(questionText); 
+        console.log(questionText);
+        return 
     } //Show question 5
 }
