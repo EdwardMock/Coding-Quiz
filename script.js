@@ -117,5 +117,5 @@ function correctAnswers() {
 $(startquiz).on('click', function() {
     console.log(startquiz, 'Clicked');
     getQuestion();
-    var questionText = document.getElementById("questions.question");
+    
 });
