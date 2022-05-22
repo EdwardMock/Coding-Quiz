@@ -1,10 +1,3 @@
-var questionsSelection = [
-    'Commonly used data types DO not include:', 
-    'The condition in an if/else statement is enclosed with ____', 
-    'Arrays in JavaScript can be used to store ____.', 
-    'String value must be enclosed within ____ when being assigned to a variable', 
-    'A very useful tool used during development and debugging for printing content to the debugger is ____' ];
-
 var score = 0;
 var correctAnswerCount = 0;
 var incorrectAnswerCount = 0;
@@ -16,7 +9,6 @@ function getQuestion() {
     var thirdQuestion = Math.floor(Math.random(0,5)* 5);
     var fourthQuestion = Math.floor(Math.random(0,5)* 5);
     var fifthQuestion = Math.floor(Math.random(0,5)* 5);
-    
     
     if (firstQuestion === 0) {
         questionText = 'Commonly used data types DO not include:';
@@ -74,6 +66,54 @@ function getQuestion() {
     } //Show question 5 and possible answers
 }
 
+//Correct Answer Logic
+var correctAnswer1 = document.getElementById('answer3')
+var correctAnswer2 = document.getElementById('answer2')
+var correctAnswer3 = document.getElementById('answer4')
+var correctAnswer4 = document.getElementById('answer3')
+var correctAnswer5 = document.getElementById('answer4')
+  
+function correctAnswers() {
+    if (questionText === 'Commonly used data types DO not include:') {
+        $(answer3).on('click', function() {
+            document.getElementById('correctincorrect').innerHTML = ('Correct!')
+            console.log('Clicked Correct')
+            getQuestion()
+        })   
+    }
+    else if (questionText === 'The condition in an if/else statement is enclosed with ____') {
+        $(correctAnswer2).on('click', function(){
+            document.getElementById('correctincorrect').innerHTML = ('Correct!')
+            console.log('Clicked Correct')
+            getQuestion()
+        })
+    }
+    else if (questionText === 'Arrays in JavaScript can be used to store ____.') {
+        $(correctAnswer3).on('click', function(){
+            document.getElementById('correctincorrect').innerHTML = ('Correct!')
+            console.log('Clicked Correct')
+            getQuestion()
+        })
+    }
+    else if (questionText === 'String value must be enclosed within ____ when being assigned to a variable') {
+        $(correctAnswer4).on('click', function(){
+            document.getElementById('correctincorrect').innerHTML = ('Correct!')
+            console.log('Clicked Correct')
+            getQuestion()
+        })
+    }
+    else if (questionText === 'A very useful tool used during development and debugging for printing content to the debugger is ____') {
+        $(correctAnswer4).on('click', function(){
+            document.getElementById('correctincorrect').innerHTML = ('Correct!')
+            console.log('Clicked Correct')
+            getQuestion()
+        })
+    }
+}
+
+
+
+// Start Quiz Functions
 $(startquiz).on('click', function() {
     console.log(startquiz, 'Clicked');
     getQuestion();
