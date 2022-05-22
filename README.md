@@ -1,6 +1,8 @@
 # Coding-Quiz
 Week 4 Challenge Coding Quiz
 
+### This is a Work In Progress
+
 ## Week 4 Challenge - Coding Quiz
 
 Assignment Requirements:
@@ -16,6 +18,6 @@ Assignment Requirements:
 
 ## Link to live
 
-[View Website](# "View Website")
+[View Website]([#](https://edwardmock.github.io/Coding-Quiz/) "View Website")
 
-![alt text](# "Screenshot of Website")
+![alt text]([#](https://i.imgur.com/MuLRVU4.png) "Screenshot of Website")
