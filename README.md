@@ -18,6 +18,6 @@ Assignment Requirements:
 
 ## Link to live
 
-[View Website]([#](https://edwardmock.github.io/Coding-Quiz/) "View Website")
+[View Website](https://edwardmock.github.io/Coding-Quiz/ "View Website")
 
-![alt text]([#](https://i.imgur.com/MuLRVU4.png) "Screenshot of Website")
+![alt text](https://i.imgur.com/MuLRVU4.png "Screenshot of Website")
