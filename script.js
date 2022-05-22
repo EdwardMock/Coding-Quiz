@@ -15,49 +15,73 @@ var score = 0;
 var correctAnswerCount = 0;
 var incorrectAnswerCount = 0;
 
-$(startquiz).on('click', function() {
-    getQuestion();
-    var questionText = document.getElementById("questions.question");
-    questionText.insertAdjacentHTML('beforeEnd', (questionText));
-
-});
-
-
 function getQuestion() {
-    var firstQuestion = Math.floor(Math.random() * questionsSelection.length); //Get random question
-    var secondQuestion = Math.floor(Math.random() * questionsSelection.length);
-    var thirdQuestion = Math.floor(Math.random()* questionsSelection.length);
-    var fourthQuestion = Math.floor(Math.random()* questionsSelection.length);
-    var fifthQuestion = Math.floor(Math.random()* questionsSelection.length);
+    var firstQuestion = Math.floor(Math.random(0,5) * 5); //Get random question
+    var secondQuestion = Math.floor(Math.random(0,5) * 5);
+    var thirdQuestion = Math.floor(Math.random(0,5)* 5);
+    var fourthQuestion = Math.floor(Math.random(0,5)* 5);
+    var fifthQuestion = Math.floor(Math.random(0,5)* 5);
     
     
     if (firstQuestion === 0) {
         questionText = 'Commonly used data types DO not include:';
         console.log(questionText);
+        document.getElementById ('questions.question').innerHTML = questionText;
+        document.getElementById ('answer1').innerHTML = (questionOneAnswers.indexOf(0));
+        document.getElementById ('answer2').innerHTML = (questionOneAnswers.indexOf(1));
+        document.getElementById ('answer3').innerHTML = (questionOneAnswers.indexOf(2));
+        document.getElementById ('answer4').innerHTML = (questionOneAnswers.indexOf(3));
         return
-    }//Show question 1
+    }//Show question 1 and possible answers
     
     else if (secondQuestion === 1) {
         questionText = 'The condition in an if/else statement is enclosed with ____';
-
         console.log(questionText);
+        document.getElementById ('questions.question').innerHTML = questionText;
+        document.getElementById ('answer1').innerHTML = (questionTwoAnswers.indexOf(0));
+        document.getElementById ('answer2').innerHTML = (questionTwoAnswers.indexOf(1));
+        document.getElementById ('answer3').innerHTML = (questionTwoAnswers.indexOf(2));
+        document.getElementById ('answer4').innerHTML = (questionTwoAnswers.indexOf(3));
         return
-    }  //Show question 2
+    }  //Show question 2 and possible answers
 
     else if (thirdQuestion === 2) { 
         questionText = 'Arrays in JavaScript can be used to store ____.';
         console.log(questionText);
+        document.getElementById ('questions.question').innerHTML = questionText;
+        document.getElementById ('answer1').innerHTML = (questionThreeAnswers.indexOf(0));
+        document.getElementById ('answer2').innerHTML = (questionThreeAnswers.indexOf(1));
+        document.getElementById ('answer3').innerHTML = (questionThreeAnswers.indexOf(2));
+        document.getElementById ('answer4').innerHTML = (questionThreeAnswers.indexOf(3));
         return 
     } //Show question 3
     else if (fourthQuestion === 3) {
         questionText = 'String value must be enclosed within ____ when being assigned to a variable';
         console.log(questionText);
+        document.getElementById ('questions.question').innerHTML = questionText;
+        document.getElementById ('answer1').innerHTML = (questionFourAnswers.indexOf(0));
+        document.getElementById ('answer2').innerHTML = (questionFourAnswers.indexOf(0));
+        document.getElementById ('answer3').innerHTML = (questionFourAnswers.indexOf(0));
+        document.getElementById ('answer4').innerHTML = (questionFourAnswers.indexOf(0));
         return 
-    } //Show question 4
+    } //Show question 4 and possible answers
 
     else if (fifthQuestion === 4); {
         questionText = 'A very useful tool used during development and debugging for printing content to the debugger is ____';
         console.log(questionText);
+        document.getElementById ('questions.question').innerHTML = questionText;
+        document.getElementById ('answer1').innerHTML = (questionFiveAnswers.indexOf(0));
+        document.getElementById ('answer2').innerHTML = (questionFiveAnswers.indexOf(0));
+        document.getElementById ('answer3').innerHTML = (questionFiveAnswers.indexOf(0));
+        document.getElementById ('answer4').innerHTML = (questionFiveAnswers.indexOf(0));
         return 
-    } //Show question 5
+    } //Show question 5 and possible answers
 }
+
+$(startquiz).on('click', function() {
+    console.log(startquiz, 'Clicked');
+    getQuestion();
+    var questionText = document.getElementById("questions.question");
+    questionText.insertAdjacentHTML('beforeEnd', (questionText));
+    
+});
