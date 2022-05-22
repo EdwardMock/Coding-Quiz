@@ -78,6 +78,4 @@ $(startquiz).on('click', function() {
     console.log(startquiz, 'Clicked');
     getQuestion();
     var questionText = document.getElementById("questions.question");
-    questionText.insertAdjacentHTML('beforeEnd', (questionText));
-    
 });
